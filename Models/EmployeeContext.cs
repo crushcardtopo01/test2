@@ -17,7 +17,7 @@ namespace test2.Models{
 
 
             base.OnModelCreating(modelBuilder);
-            var employee =  new Employee(40,"Carlos","Trevera", "TEEC940306EI2");
+            var employee =  new Employee(40,"Carlos","Trevera", "TEEC940306EI2",System.DateTime.Now,EmployeeStatus.Active);
             modelBuilder.Entity<Employee>().HasData(
                 employee
             );

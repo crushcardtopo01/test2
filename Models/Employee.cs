@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using test2.Controllers;
 
 namespace test2.Models
 {
@@ -13,8 +14,7 @@ namespace test2.Models
 
                 public string LastName { get; set;}
 [Required(ErrorMessage = "must write RFC")]
-[StringLength(13)] 
-[MinLengthAttribute(13, ErrorMessage = "You Need write Correct RFC")]              
+[RFCExists]            
 public string RFC { get; set;}
                 public DateTime BornDate { get; set; }    
 
