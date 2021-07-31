@@ -12,7 +12,9 @@ namespace test2.Models
                 public string Name { get; set;}
 
                 public string LastName { get; set;}
-[Required] [Range(10, 10)]               
+[Required(ErrorMessage = "must write RFC")]
+[StringLength(13)] 
+[MinLengthAttribute(13, ErrorMessage = "You Need write Correct RFC")]              
 public string RFC { get; set;}
                 public DateTime BornDate { get; set; }    
 

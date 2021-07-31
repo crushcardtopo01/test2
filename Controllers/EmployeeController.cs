@@ -18,7 +18,7 @@ namespace test2.Controllers{
             
             _context.Employees.Add(employee);
             _context.SaveChanges();
-            
+
           return View();
           }
 
@@ -33,7 +33,7 @@ namespace test2.Controllers{
             };
             listempleados.Add(employee);*/
 
-             var listempleados= _context.Employees;
+            var listempleados= _context.Employees;
 
 
           
