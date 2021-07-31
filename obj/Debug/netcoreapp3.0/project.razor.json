@@ -10185,6 +10185,11 @@
   "RootNamespace": "test2",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\Employee\\Create.cshtml",
+      "TargetPath": "Views\\Employee\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

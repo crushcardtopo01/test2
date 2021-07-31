@@ -1,0 +1,48 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div asp-validation-summary = "All"></div>
+
+
+<form method="POST">
+
+    <div>
+        <div>
+            <label asp-for="Id"></label>    
+        <input asp-for= "Id">
+        </div>
+
+        <div>
+            <label asp-for="Name"></label>   
+        <input asp-for="Name"/>
+        </div>
+        
+        
+        <div>
+            <label asp-for="LastName"></label>   
+        <input asp-for="LastName"/>
+        </div>
+
+        <div>
+            <label asp-for="RFC"></label>   
+        <input asp-for="RFC"/>
+        </div>
+        <div>
+            <label asp-for="BornDate"></label>   
+        <input asp-for="BornDate"/>
+        </div>
+
+        <div>
+            @Html.DropDownList(
+                "Jornada", Html.GetEnumSelectList<EmployeeStatus>(),"Select"
+            )
+        </div>
+        
+
+
+    </div>
+
+    <input type="submit"> 
+</form>
