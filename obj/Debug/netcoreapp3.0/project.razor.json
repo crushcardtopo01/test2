@@ -10190,6 +10190,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\Employee\\Index.cshtml",
+      "TargetPath": "Views\\Employee\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -10202,6 +10207,11 @@
     {
       "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\CTrev\\Documents\\Test2\\test2\\Views\\Shared\\EmployeeList.cshtml",
+      "TargetPath": "Views\\Shared\\EmployeeList.cshtml",
       "FileKind": "mvc"
     },
     {
