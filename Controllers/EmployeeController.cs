@@ -10,21 +10,26 @@ namespace test2.Controllers{
 
         private EmployeeContext _context;
 
-          public IActionResult Create() {
-          
-          return View();
-          }
+        public IActionResult Create() {
+        
+        return View();
+        }
 
         [HttpPost]
         public IActionResult Create(Employee employee) {
-            
-            
+            bool flag= false;
 
-            if(ModelState.IsValid){
+            var listempleados= _context.Employees;
+
+                foreach (var item in listempleados)
+                {
+                    if (item.RFC == employee.RFC){
+                        flag=true;
+                    }
+                }
+            if(ModelState.IsValid && !flag){
                 _context.Employees.Add(employee);
                 _context.SaveChanges();
-                 var listempleados= _context.Employees;
-
                 return View("index",listempleados);
             }else{
                 
@@ -104,17 +109,26 @@ namespace test2.Controllers{
 
             string rfc= (string) value;
 
-            var part1 = rfc.Substring(0,4);
+            try
+            {
+                var part1 = rfc.Substring(0,4);
             var part2 = rfc.Substring(4,6);
 
 
-            
             if(rfc.Length!= 13 && isCorrect(part1,part2)){
                 return new ValidationResult("Incorrect formart of RFC");
             }else{
 
                 return ValidationResult.Success;
             }
+            }
+            catch (System.Exception e)
+            {
+                
+                return new ValidationResult("Incorrect formart of RFC");
+            }
+
+            
 
             
         }
